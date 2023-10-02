@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>On Page Assistant</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.37.1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+	<link href="style.css" rel="stylesheet">
+   
+     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
+
+    
+</head>
+
+<body background="most-expensive-cars-in-the-world.jpg">
+	
+
+	<div class="container-fluid button-container">
+		<div class="row">
+			<div class="col-3">
+				<button onclick="resetDiv()" class="btn btn-danger">Reset</button>
+					<div class="row model" id="movingDiv">
+						<div class="col">
+							<model-viewer class="main-model" src ="Mustang 13.04.2021 Compressed.blend" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
+								<img src="White-modern-car-on-transparent-background-PNG.png" alt="" style="width: 220px; justify-content: center; align-items: center;">
+								<p id = 'desc' class="model-description">Learn how to drive. I will be your guide. Click any button to learn</p>
+							</model-viewer>
+							<div class="spinner-border" role="status" id="loadingSpinner">
+								<span class="visually-hidden">Loading...</span>
+							</div>
+							
+						</div>
+					</div>
+				
+			</div>
+			<div class="col-9">
+				<div class="btn-row p-2">
+					<div class="col-12 first_column">
+						<div class="row justify-content-between">
+							<div class="col-3">
+								<button id="steering" class="btn btn-primary" onclick="moveDivTo(this, 'This is what you use to turn the car to ant direction.', 'srear.jpeg' )">Steering Wheel</button>
+							</div>
+							<div class="col-3">
+								<button id="gas_pedal" class="btn btn-primary" onclick="moveDivTo(this, ' This makes the car look like it is fast', 'model3/scene.gltf')">Gas pedal</button>
+							</div>
+							<div class="col-3">
+								<button id="brake_pedal" class="btn btn-primary" onclick="moveDivTo(this, 'THis is the ui of the stoped car.', 'model1/scene.gltf')">Brake pedal</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="row justify-content-between">
+							<div class="col-3">
+								<button class="btn btn-primary" onclick="moveDivTo(this, ' This is what you use to change gears from drive to ?.', 'model4/scene.gltf')">Gear</button>
+							</div>
+							<div class="col-3">
+								<button class="btn btn-primary" onclick="moveDivTo(this, 'Use it to alert others in emergencies, but avoid unnecessary pimpim', 'model1/scene.gltf')">Horn pimppim</button>
+							</div>
+							<div class="col-3">
+								<button class="btn btn-primary" onclick="moveDivTo(this, 'This is used to keep the car from moving when it is parked', 'model1/scene.gltf')">Parking</button>
+							</div>
+						</div>
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	
+
+
+	<!-- 💁 Include both scripts below to support all browsers! -->
+
+	<!-- Loads <model-viewer> for modern browsers: -->
+	  <script type="module"
+		  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+	  </script>
+
+	<!-- Loads <model-viewer> for old browsers like IE11: -->
+	<script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
